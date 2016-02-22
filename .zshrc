@@ -88,16 +88,9 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Load zsh-autosuggestions.
-source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Enable autosuggestions automatically.
-zle-line-init() {
-    zle autosuggest-start
-}
-zle -N zle-line-init
-
-
-AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=5'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 
 export IBUS_ENABLE_SYNC_MODE=1
