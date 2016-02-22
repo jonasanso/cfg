@@ -1,0 +1,1 @@
+/home/jonas/dotfiles/zsh/configs/post/path.zsh
