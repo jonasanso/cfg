@@ -5,7 +5,7 @@
 ```
 git clone --bare --recursive git@github.com:jonasanso/cfg.git $HOME/.cfg 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-config checkout # Review possible errors overriding dot files
+config checkout # Review possible errors overriding dot files and accept the licenses before
 cd $HOME/.cfg
 config submodule update --init
 config submodule update
