@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/jonas/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -94,5 +94,5 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 
 export IBUS_ENABLE_SYNC_MODE=1
-alias config='/usr/bin/git --git-dir=/home/jonas/.cfg/ --work-tree=/home/jonas'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=/home/jonas'
 alias scalarepl=/usr/bin/amm
