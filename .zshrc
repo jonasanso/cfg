@@ -95,4 +95,5 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 export IBUS_ENABLE_SYNC_MODE=1
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-alias scalarepl=/usr/bin/amm
+alias scalarepl=amm
+alias remove-old-branches="git branch --merged | grep -v '\*' | grep -v 'master' | grep -v 'develop' | grep -v 'staging' | xargs -n 1 git branch -d && git remote prune origin"
