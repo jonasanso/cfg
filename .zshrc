@@ -53,8 +53,8 @@ plugins=(git command-not-found httpie scala sbt zsh-syntax-highlighting zsh-auto
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Users/jonas/Library/Application\ Support/Coursier/bin"
+export INIT_PATH="$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,3 +93,8 @@ export IBUS_ENABLE_SYNC_MODE=1
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias scalarepl=amm
 alias remove-old-branches="git branch --merged | grep -v '\*' | grep -v 'master' | grep -v 'develop' | grep -v 'staging' | xargs -n 1 git branch -d && git remote prune origin"
+alias setup-graal-jvm="export JAVA_HOME=$(/usr/libexec/java_home -v 11); export PATH=$(/usr/libexec/java_home -v 11)/bin:$INIT_PATH"
+alias setup-jvm-8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); export PATH=$(/usr/libexec/java_home -v 1.8)/bin:$INIT_PATH"
+
+# setup jvm
+setup-jvm-8
