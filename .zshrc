@@ -96,6 +96,9 @@ alias ls="ls -lah"
 alias remove-old-branches="git branch --merged | grep -v '\*' | grep -v 'master' | grep -v 'develop' | grep -v 'staging' | xargs -n 1 git branch -d && git remote prune origin"
 alias setup-graal-jvm="export JAVA_HOME=$(/usr/libexec/java_home -v 11); export PATH=$(/usr/libexec/java_home -v 11)/bin:$INIT_PATH"
 alias setup-jvm-8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); export PATH=$(/usr/libexec/java_home -v 1.8)/bin:$INIT_PATH"
+alias setup-jvm-11="export JAVA_HOME=/Users/jonas/Library/Caches/Coursier/jvm/openjdk@1.11.0-2/Contents/Home; export PATH=/Users/jonas/Library/Caches/Coursier/jvm/openjdk@1.11.0-2/Contents/Home/bin:$INIT_PATH"
+alias setup-jvm-12="export JAVA_HOME=/Users/jonas/Library/Caches/Coursier/jvm/openjdk@1.12.0-2/Contents/Home; export PATH=/Users/jonas/Library/Caches/Coursier/jvm/openjdk@1.12.0-2/Contents/Home/bin:$INIT_PATH;export PATH_TO_FX=/Users/jonas/software/javafx-sdk-11.0.2/lib"
+
 alias run='x(){ local app="$1"; shift 1; find . -perm +111 -type f -name "$app" -exec {} $@ \;;  unset -f x; }; x'
 
 # setup jvm
