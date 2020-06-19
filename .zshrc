@@ -93,7 +93,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 export IBUS_ENABLE_SYNC_MODE=1
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias scalarepl=amm
-alias ls="CLICOLOR_FORCE=1 ls -lhAFG | tail -n +2 | less -X -F --quit-at-eof"
+alias ls='funtion f(){CLICOLOR_FORCE=1 ls -lhAFG $* | tail -n +2 | less -X -F --quit-at-eof};f'
 alias remove-old-branches="git branch --merged | grep -v '\*' | grep -v 'master' | grep -v 'develop' | grep -v 'staging' | xargs -n 1 git branch -d && git remote prune origin"
 alias setup-graal-jvm="export JAVA_HOME=$(/usr/libexec/java_home -v 11); export PATH=$(/usr/libexec/java_home -v 11)/bin:$INIT_PATH"
 alias setup-jvm-8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); export PATH=$(/usr/libexec/java_home -v 1.8)/bin:$INIT_PATH"
