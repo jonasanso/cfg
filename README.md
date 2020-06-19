@@ -10,6 +10,7 @@ cd $HOME/.cfg
 config submodule update --init
 config submodule update
 config config --local status.showUntrackedFiles no
+config config --global core.excludesfile ~/.gitignore
 ```
 
 ## Reference
